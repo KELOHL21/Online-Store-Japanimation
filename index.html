@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Boostrap CSS only
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+
+      <!-- Script -->
+
+      <!-- vue script -->
+      <script src="https://unpkg.com/vue@3" ></script>
+
+      <!-- axios cdn -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+      <!-- my scripts -->
+      <script type='module' src ="src/javascript/index.js" defer></script>
+      <script type="module" src="src/javascript/nav.js" defer></script>
+
+      <!-- awesomeFonts script -->
+      <script src="https://kit.fontawesome.com/45c101dd7d.js" crossorigin="anonymous"></script>
+
+      <!-- My Stylesheet -->
+      <link rel="stylesheet" href="./src/stylesheet/stylesheet.css">
+      
+      
+      
+         <title>Japanimation HomePage</title>
+      
+   </head>
+
+   <header id="nav_container">
+      <h1 class="logo">Japanimation</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./src/pages/about.html">About</a></li>
+          <li><a href="#">Shopping</a></li>
+          <li><a href="#contact_form">Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+
+    <div class="content">
+      <h2>Japanimation</h2>
+      <a href="#arrow_down"><i class="fa-solid fa-arrow-down fa-3x"></i></a>
+    </div>
+
+
+   <body>
+
+      <div id="main"  class="main">
+
+            <!-- Hoodies -->
+               <section id="hoodies" class="hoodies">
+
+                  <h2 class="category_header" id="arrow_down">Hoodies</h2>
+
+                     <div class="card-holder">
+   
+                        <div id="product-card" class="product-card" v-for="item in hoodies">
+                                 <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                                 <h4>{{ item.product_name }}</h4>
+   
+                                 <img class="product_images" v-bind:src="'./src/images/hoodies/' + item.product_pic">
+   
+                                 <p>R{{ item.product_price }}-00</p>
+   
+                                 <p>{{ item.product_desc}}</p>
+   
+                                 <input type="submit" name="view" value="View" class="btn"/>
+                        </div>
+   
+                     </div>
+
+               </section>
+
+         </section>
+       
+         <!-- featured products section 
+         
+         Featured section ended -->
+
+         <div class="about">
+            <div class="inner-section">
+                <h1>About Us</h1>
+                <p class="about_text">
+                  Japanimation is a retail experience created for fans of anime and anime culture. We carry 100% officially licensed EXCLUSIVE clothing from the biggest names in anime like Dragon Ball Z, Cowboy Bebop, My Hero Academia, Crunchyroll, and many more.It started in 2010 and has grown bigger than ever anticipated.
+                </p>
+                <div class="skills">
+                    <a href="./src/pages/about.html"><button>Learn More</button></a>
+                </div>
+            </div>
+        </div>
+
+         <!-- T-shirt -->
+
+         <container id="t-shirts" class="t-shirts">
+
+            <h2 class="category_header">T-shirt</h2>
+
+               <div class="card-holder">
+   
+                  <div id="product-card" class="product-card" v-for="item in t_shirts">
+                           <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                           <h4>{{ item.product_name }}</h4>
+   
+                           <img class="product_images" v-bind:src="'./src/images/' + item.product_pic">
+   
+                           <p>R{{ item.product_price }}-00</p>
+   
+                           <p>{{ item.product_desc}}</p>
+   
+                           <input type="submit" name="view" value="View" class="btn"/>
+                  </div>
+   
+               </div>
+
+         </container>
+
+
+      <container class="contact_us">
+
+         <div class="contact_container" id="contact_form">
+            <span class="big-circle"></span>
+            <div class="form">
+              <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                  If you want to create personalized shirts, hoodies, and much more with our online editor give us a ring. Alternatively if there are any issues that you are experiencing whether it be our customer service or with our products please inform us.
+                </p>
+      
+                <div class="info">
+                  <div class="information">
+                     <i class="fa-solid fa-location-dot fa-lg" id="icon"></i>
+                    <p>7 Dreyer St, Claremont</p>
+                  </div>
+                  <div class="information">
+                     <i class="fa-solid fa-envelope fa-lg " id="icon"></i>
+                    <p>Japanimation.co.za</p>
+                  </div>
+                  <div class="information">
+                     <i class="fa-solid fa-phone fa-lg" id="icon"></i>
+                    <p>074 572 1123</p>
+                  </div>
+                </div>
+      
+                <div class="social-media">
+                  <p>Connect with us :</p>
+                  <div class="social-icons">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+      
+                <form action="index.html" autocomplete="off">
+                  <h3 class="title">Contact us</h3>
+                  <div class="input-container">
+                    <input type="text" name="name" class="input" />
+                    <label for="">Username</label>
+                    <span>Username</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" name="email" class="input" />
+                    <label for="">Email</label>
+                    <span>Email</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" name="phone" class="input" />
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                  </div>
+                  <div class="input-container textarea">
+                    <textarea name="message" class="input"></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                  </div>
+                  <input type="submit" value="Send" class="btn" />
+                </form>
+              </div>
+            </div>
+          </div>
+   
+      </container>
+
+         <!-- Upcoming section starts -->
+         <container id="new" class="new">
+
+            <h2 class="category_header">Upcoming</h2>
+   
+               <div class="card-holder">
+      
+                  <div id="product-card" class="product-card" v-for="item in upcoming">
+   
+                           <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                           <h4>{{ item.product_name }}</h4>
+      
+                           <img class="product_images" v-bind:src="'./src/images' + item.product_pic">
+      
+                           <p>R{{ item.product_price }}-00</p>
+      
+                           <p>{{ item.product_desc}}</p>
+      
+                           <input type="submit" name="view" value="View" class="btn"/>
+                  </div>
+      
+               </div>
+   
+         </container>
+         <!-- upcoming section ending -->
+
+        </div>
+
+
+      <!-- Boostrap JavaScript Bundle with Popper
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
+
+   </body>
+
+   <footer class="footer">
+  	 <div class="footercontainer">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">shipping</a></li>
+  	 				<li><a href="#">returns</a></li>
+  	 				<li><a href="#">order status</a></li>
+  	 				<li><a href="#">payment options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="#">watch</a></li>
+  	 				<li><a href="#">bag</a></li>
+  	 				<li><a href="#">shoes</a></li>
+  	 				<li><a href="#">dress</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+   
+</html>
+
+
+   
