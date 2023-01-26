@@ -1,5 +1,6 @@
 <h1>Japanimation Anime OnlineStore</h1>
 
+<h1>NB!</h1>
 --> Please use CMD localhost:8888 to host the project!!! <--
 
 <h2>About</h2>
@@ -8,16 +9,13 @@
 <h2>Feature</h2>
 <ul>
 <li>Product Sections</li>
-<li>Sign In, Sign Out</li>
-<li>Forgot Password</li>
 <li>HomePage</li>
-<li>About and Contacts Pages</li>
+<li>About Pages</li>
+<li>Login/SignUp Pages</li>
 </ul>
 
 <h2>Backlog</h2>
 <ul>
-<li>Media Queries</li>
-<li>Design Wise</li>
 <li>Some issues with Login:Not returning to Home page once logged in</li>
 <li>Cart</li>
 </ul>
