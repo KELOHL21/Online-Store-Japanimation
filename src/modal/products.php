@@ -8,17 +8,15 @@ class Products implements JsonSerializable{
     public $name;
     public $description;
     public $price;
-    public $upcoming;
     public $image;
     
 
-    public function __construct($id, $name, $description, $price, $upcoming , $image)
+    public function __construct($id, $name, $description, $price, $image)
     {
         $this-> id = $id;
         $this-> name = $name;
         $this-> description = $description;
         $this-> price = $price;      
-        $this-> upcoming = $upcoming;
         $this-> image = $image;
     }
 
@@ -29,7 +27,6 @@ class Products implements JsonSerializable{
             "name"  => $this -> name,
             "description" => $this -> description,
             "price" => $this -> price,
-            "upcoming" => $this -> upcoming,
             "image" => $this -> image,
         ];
 
@@ -76,16 +73,6 @@ class Products implements JsonSerializable{
 
         return $this;
     } 
-
-    public function getUpcoming(){
-        return $this->upcoming;
-    }
-
-    public function Upcoming($upcoming){
-        $this->upcoming = $upcoming;
-
-        return $this;
-    }
     
     public function getImage(){
         return $this->image;

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- My Stylesheet -->
+      <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+      
+      <!-- awesomeFonts script -->
+      <script src="https://kit.fontawesome.com/45c101dd7d.js" crossorigin="anonymous" defer></script>
+      
+      <!-- vue script -->
+      <script src="https://unpkg.com/vue@3" defer></script>
+
+      <!-- axios cdn -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script> 
+      
+      <!-- my scripts -->
+      <script type='module' src ="../javascript/cart.js" defer></script>
+
+      <script type="module" src="/src/javascript/nav.js" defer></script>
+
+      
+         <title>Japanimation</title>
+      
+   </head>
+
+   <header id="nav_container">
+      <h1 class="logo">Japanimation</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./src/pages/about.html">About</a></li>
+          <li><a href="#">Shopping</a></li>
+          <li><a href="#contact_form">Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+   <body>
+
+    <div class="content1">
+      <br>
+    </div>
+
+    <main id="main" class="main">
+
+          <div class="info" v-for="item in cart">
+              <h2>Check Out:</h2>
+              <p>User: {{ item.cart_user }}</p>
+              <p>Product: {{item.cart_products}}</p>
+              <p>Total: R{{item.cart_total}}-00</p>
+              <form action="./src/php/cart-crud/create-new-cart.php" method="post">
+                  <textarea hidden name="username">{{item.cart_user}}</textarea>
+                  <input type="submit" value="Confirm Order" name="confirm" class="btn">
+              </form>
+              <a href="./view_product.html">cancel</a>
+      </main>
+
+   </body>
+
+   <footer class="footer">
+  	 <div class="footercontainer">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">shipping</a></li>
+  	 				<li><a href="#">returns</a></li>
+  	 				<li><a href="#">order status</a></li>
+  	 				<li><a href="#">payment options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="#">watch</a></li>
+  	 				<li><a href="#">bag</a></li>
+  	 				<li><a href="#">shoes</a></li>
+  	 				<li><a href="#">dress</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+   
+</html>
+
+
+   

@@ -1,6 +1,4 @@
-
 const { createApp } = window.Vue;
-
 
 const component = {
     data(){
