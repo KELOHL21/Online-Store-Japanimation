@@ -25,6 +25,16 @@ class Cart implements JsonSerializable{
 
     }
 
+    public function getProductId(){
+        return $this->productId;
+    }
+
+    public function setproductId($productId){
+        $this->productId = $productId;
+
+        return $this;
+    } 
+
 
     public function getProductName(){
         return $this->productName;

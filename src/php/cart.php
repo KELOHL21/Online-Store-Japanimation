@@ -15,7 +15,7 @@ if (isset($_POST["cart"])) {
 
     $productName = $_POST["product-name"];
     $productPrice = $_POST["product-price"];
-    $productId = $_Post['product_id'];
+    $productId = $_POST["product_id"];
 
     $sql = "INSERT INTO cart (product_name, cart_total, product_id) VALUES ( :productName, :productPrice, :productId)";
 
