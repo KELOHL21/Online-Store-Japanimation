@@ -35,6 +35,10 @@ body{
   color: white;
 }
 
+.nav_head{
+  background-color: #0e6bb8;
+}
+
 .header_black{
   background-color: #0e6bb8;
 }
@@ -691,22 +695,26 @@ nav a:hover {
 /* Contact us section ends */
 
 
-/* Product Slide starts might use dunno */
+/* Product Slide start */
 
 .slider{
-  margin: 25px;
-  overflow: hidden;
+  margin-left: -1rem;
   border-radius: 25px;
-  width: 300px;
+  width: 270px;
   object-fit: contain;
+  overflow: hidden;
+  margin-top: 1rem;
 }
 
 .image img{
-  height: 300px;
-  width: 300px;
+  height: 270px;
+  width: 270px;
   align-items: center;
-  object-fit: contain;
+  object-fit:fill;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
 
 .image{
@@ -722,30 +730,34 @@ nav a:hover {
   background-color: #0e6cb8e8;
   width: inherit;
   color: white;
-  margin-top: -0.4rem;
+  justify-items: center;
+}
+
+.product-name{
+  margin-top: 0.7rem;
 }
 
 .product-name a{
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-right: 2.5rem;
+  font-size: 18px;
+  font-weight: 500;
   color: white;
+  margin-right: 1.8rem;
 }
 
 .product_info{
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem;
+  display:block;
+  margin-right: 1.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .product_info p{
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .price{
-  font-size: 17px;
-  font-weight: bold;
+  font-size: 15px;
   color: rgb(255, 255, 255);
 }
 
@@ -1077,8 +1089,8 @@ container .content h1 span{
   margin: auto;
   border:none; 
   border-radius:15px;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
   box-shadow: 10px 8px 36px -17px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 8px 36px -17px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 8px 36px -17px rgba(0,0,0,0.75);
@@ -1115,14 +1127,18 @@ container .content h1 span{
 }
 
 .back_btn{
-  width: 75%;
+  width: 100%;
   padding: 0.4rem;
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  margin-top: 0.5rem;
 }
 
+.back_btn a{
+  color:#0e6bb8;
+}
 
 /* Footer */
 

@@ -28,12 +28,12 @@
       
    </head>
 
-   <header id="nav_container">
+   <header id="nav_container" class="nav_head">
       <h1 class="logo">Japanimation</h1>
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
           <li><a href="./src/pages/about.html">About</a></li>
           <li><a href="#">Shopping</a></li>
           <li><a href="#contact_form">Contact</a></li>
@@ -77,10 +77,13 @@
 
                        <textarea hidden name="product-price">{{selectedProduct.price}}</textarea>
 
-                       <input type="submit" name="cart" value="Add to Cart" class="cart_btn"/>
+                       <input type="submit" name="cart" value="Add to Cart" class="cart_btn"/>              
+                       
+                       <button class="back_btn"><a href="/index.html">Back</a></button>
 
                    </form>
-                   <button class="back_btn"><a href="./home.html">Back</a></button>
+
+
 
                </div>
 
