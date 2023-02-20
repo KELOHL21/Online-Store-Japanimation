@@ -38,7 +38,7 @@ if (isset($_POST["cart"])) {
         $result = $stmt->execute();
         
         $database = null;
-        header("location: ../pages/checkout.html");
+        header("location: /src/pages/checkout.html");
 
     }
     catch (PDOException $e){

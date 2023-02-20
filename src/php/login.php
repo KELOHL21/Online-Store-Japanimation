@@ -26,7 +26,7 @@
            $error = "";
        }
 
-       $sql = "SELECT * FROM users WHERE username = '$username' "; // SQL with parameters
+       $sql = "SELECT * FROM users WHERE username = '$username'"; // SQL with parameters
 
 
        try{
@@ -59,12 +59,12 @@
            $json = json_encode($signedInUser);
            $file = file_put_contents("signed_in_user.json", $json);
            /* if all is correct then user will be taken to home page */
-           header("location:index.html");
+           header("location:/src/pages/home.html");
          }
          else{
            /* inputs dont match */
            echo "user not found";
-           header("location:/src/pages/login.html");
+           header("location:/index.html");
    
          }
        }
@@ -73,7 +73,7 @@
            "message" => $e->getMessage()  
          );
          /* if all is incorrect user will be taken back to sign in page */
-         header("location:/src/pages/login.html");
+         header("location:/src/pages/signup.html");
        }
    
      }

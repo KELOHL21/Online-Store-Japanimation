@@ -987,13 +987,6 @@ container .content h1{
    text-align: center;
 }
 
-container .content h1 span{
-   background: #2e5090;
-   color:#fff;
-   border-radius: 5px;
-   padding:0 15px;
-}
-
 /* Forms display */
 .form_container{
    min-height: 100vh;
@@ -1029,11 +1022,6 @@ container .content h1 span{
    background: #eee;
    border-radius: 5px;
    border: none;
-   
-}
-
-.form_container form select option{
-   background: #fff;
 }
 
 .form_container form .submit_btn{

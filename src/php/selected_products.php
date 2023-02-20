@@ -42,7 +42,7 @@
                 $json = json_encode($selectedProduct);
                 $file = file_put_contents("selectedProduct.json", $json);
                 /* if all is correct then user will be taken to home page */
-                header("location:../pages/view_product.html");
+                header("location:/src/pages/view_product.html");
             }
             else{
                 echo "error";
@@ -54,7 +54,7 @@
               "message" => $e->getMessage()  
             );
             /* if all is incorrect user will be taken back to sign in page */
-            header("location: /index.html");
+            header("location: /home.html");
         }
 
     }

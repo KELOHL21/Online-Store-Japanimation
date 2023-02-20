@@ -80,7 +80,7 @@
             
             $database = null;
             /* when data is saved, take user to sign in page to sign user in */
-            header("location:/src/pages/login.html");
+            header("location:/index.html");
          }
         catch (PDOException $e){
             $error = array(

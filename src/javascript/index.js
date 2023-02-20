@@ -14,27 +14,27 @@ const component = {
     mounted() {
         //get all merch
           axios
-            .get('public/animemerch')
+            .get('/public/animemerch')
             .then( response => (this.all = response.data))
             
             //get hoodie merch
         axios
-          .get('public/animemerch/hoodies')
+          .get('/public/animemerch/hoodies')
           .then(response =>(this.hoodies = response.data))
 
             //get t-shirt merch
         axios
-          .get('public/animemerch/t-shirts')
+          .get('/public/animemerch/t-shirts')
           .then(response =>(this.t_shirts = response.data))
 
             //get accessories merch
         axios
-          .get('public/animemerch/accessories')
+          .get('/public/animemerch/accessories')
           .then(response =>(this.accessories = response.data))
 
             //get upcoming merch
         axios
-          .get('public/animemerch/upcoming')
+          .get('/public/animemerch/upcoming')
           .then(response =>(this.upcoming = response.data))
         },    
 }
