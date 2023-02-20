@@ -1,6 +1,7 @@
 <h1>Japanimation Anime OnlineStore</h1>
 
 <h1>NB!</h1>
+--->Please be mindful that this project was created with Wamp <--
 --> Please use CMD localhost:8888 to host the project!!! <--
 
 <h2>About</h2>
