@@ -16,6 +16,7 @@ body{
    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    line-height: 1.5;
    overflow-x: hidden;
+   scroll-behavior: smooth;
 }
 
 /* Header starts */
@@ -161,9 +162,9 @@ nav a:hover {
   font-weight: 400;
 }
 
-.logo{
-  margin-right: 8em;
-}
+/* .logo{
+  margin-right: 10rem;
+} */
 
 @media screen and (min-width: 800px) {
   .nav-toggle-label {

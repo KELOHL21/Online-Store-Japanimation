@@ -28,7 +28,6 @@
 
        $sql = "SELECT * FROM users WHERE username = '$username'"; // SQL with parameters
 
-
        try{
          // Get DB Object
          $database = new Database();
